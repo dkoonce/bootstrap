@@ -1,0 +1,10 @@
+#Install minikube
+sudo apt-get install virtualbox
+MINIKUBE_VERSION=0.32.0
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/v${MINIKUBE_VERSION}/minikube-linux-amd64
+sudo install -o root -m 0755 minikube /usr/local/bin/
+rm minikube
+echo "source <(minikube completion bash)" | sudo tee /usr/local/share/bash-completion/completions/minikube 
+
+#Initialize minikube
+minikube start

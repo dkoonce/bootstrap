@@ -1,0 +1,10 @@
+#Install hub
+sudo apt install -y libsecret-tools
+HUB_VERSION=2.6.1
+wget https://github.com/github/hub/releases/download/v${HUB_VERSION}/hub-linux-amd64-${HUB_VERSION}.tgz
+tar xzf hub-linux-amd64-${HUB_VERSION}.tgz 
+cd hub-linux-amd64-${HUB_VERSION}/
+sudo ./install
+sudo install -o root -m 0644 etc/hub.bash_completion.sh /usr/local/share/bash-completion/completions/hub
+cd ..
+rm -rf hub-linux-amd64-${HUB_VERSION}/ hub-linux-amd64-${HUB_VERSION}.tgz 

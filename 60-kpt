@@ -1,0 +1,4 @@
+#Install kpt
+curl -Lo kpt https://storage.googleapis.com/kpt-dev/latest/linux_amd64/kpt
+sudo install -o root -m 0755 kpt /usr/local/bin/
+echo "complete -C /usr/local/bin/kpt kpt" | sudo tee /usr/local/share/bash-completion/completions/kpt

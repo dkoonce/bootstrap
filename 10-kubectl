@@ -1,0 +1,12 @@
+#Install kubectl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+echo "source <(kubectl completion bash)" | sudo tee /usr/local/share/bash-completion/completions/kubectl 
+
+#KUBECTL_VERSION=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+#curl -LO https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl
+#sudo install -o root -m 0755 kubectl /usr/local/bin/
+#rm kubectl
+#echo "source <(kubectl completion bash)" | sudo tee /usr/local/share/bash-completion/completions/kubectl 

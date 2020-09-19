@@ -1,0 +1,6 @@
+#Install skaffold
+SKAFFOLD_VERSION=0.19.0
+curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v${SKAFFOLD_VERSION}/skaffold-linux-amd64
+sudo install -o root -m 0755 skaffold /usr/local/bin
+rm skaffold
+#echo "source <(skaffold completion bash)" | sudo tee /usr/local/share/bash-completion/completions/skaffold

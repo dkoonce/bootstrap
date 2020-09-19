@@ -1,0 +1,4 @@
+#Install Atom
+curl -Lo atom.deb https://atom.io/download/deb
+sudo dpkg -i atom.deb
+rm atom.deb

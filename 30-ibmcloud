@@ -1,0 +1,12 @@
+#Install IBM Cloud CLI
+curl -fsSL https://clis.ng.bluemix.net/install/linux | sudo -sH
+sudo ln -s /usr/local/ibmcloud/bx/bash_autocomplete /usr/local/share/bash-completion/completions/bluemix
+sudo ln -s /usr/local/ibmcloud/bx/bash_autocomplete /usr/local/share/bash-completion/completions/bx
+sudo ln -s /usr/local/ibmcloud/bx/bash_autocomplete /usr/local/share/bash-completion/completions/ibmcloud
+#sudo ln -s /usr/local/ibmcloud/bx/bash_autocomplete /usr/local/share/bash-completion/completions/ic
+
+sed -e 's/"ibmcloud"/"ibmcloud" "ic"/' -e s/_bash/_ibmcloud/ /usr/local/ibmcloud/bx/bash_autocomplete
+
+#Install IBM Cloud CLI plugins
+ic plugin install container-registry
+ic plugin install container-service
