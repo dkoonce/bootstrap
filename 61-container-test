@@ -1,0 +1,4 @@
+curl -LO https://storage.googleapis.com/container-structure-test/v1.9.1/container-structure-test-linux-amd64
+mv container-structure-test-linux-amd64 container-structure-test
+chmod +x container-structure-test
+sudo mv container-structure-test /usr/local/bin/
