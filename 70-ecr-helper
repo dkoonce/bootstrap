@@ -1,0 +1,4 @@
+#Install Docker credential helper for Amazon ECR 
+curl -Lo docker-credential-ecr-login https://amazon-ecr-credential-helper-releases.s3.us-east-2.amazonaws.com/0.5.0/linux-amd64/docker-credential-ecr-login
+sudo install -o root -m 0755 docker-credential-ecr-login /usr/local/bin/
+rm docker-credential-ecr-login
