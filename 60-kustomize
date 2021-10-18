@@ -1,4 +1,4 @@
 #Install kustomize
-KUSTOMIZE_VERSION=3.5.5
+KUSTOMIZE_VERSION=4.2.0
 curl -Lo - https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${KUSTOMIZE_VERSION}/kustomize_v${KUSTOMIZE_VERSION}_linux_amd64.tar.gz | sudo tar -xz -C /usr/local/bin 
 echo "complete -C /usr/local/bin/kustomize kustomize" | sudo tee /usr/local/share/bash-completion/completions/kustomize
